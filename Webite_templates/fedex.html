@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fedex</title>
+    <style>
+        * {
+            margin: 0px;
+            font-family: system-ui;
+        }
+
+        .navbar {
+            background-color: #540099;
+            display: flex;
+        }
+
+        .item {
+            text-decoration: none;
+            padding: 20px;
+            color: white;
+        }
+
+        .img {
+            padding: 20px;
+        }
+
+        .item:hover {
+            background-color: hsl(280, 50%, 60%);
+        }
+
+        .heading {
+            text-align: center;
+            padding: 20px;
+            font-weight: 300;
+            font-size: 50px;
+            color: white;
+            padding-top: 70px;
+        }
+
+        form {
+            padding: 20px;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        .background {
+            background-image: url("https://www.fedex.com/content/dam/fedex/us-united-states/Hero/homepage/desktop.jpg");
+            height: 400px;
+        }
+
+        .button {
+            padding: 20px;
+            color: white;
+            background-color: rgb(255, 89, 0);
+            width: 70px;
+            margin-left: 5px;
+        }
+
+        .center-align{
+            display: flex;
+            margin: 30px;
+            text-align: center;
+            justify-content: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="img"><img src="https://www.fedex.com/content/dam/fedex-com/logos/logo.png" width="60px"></div>
+        <a class="item">Shipping</a>
+        <a class="item">Tracking</a>
+        <a class="item">Design & Print</a>
+        <a class="item">Locations</a>
+        <a class="item">Support</a>
+    </div>
+    <div class="background">
+        <h1 class="heading">Ship, manage, track, Deliver</h1>
+        <div class="center-align">
+            <input type="number" placeholder="TRACKING ID">
+            <div class="button">Track</div>
+        </div>
+    </div>
+</body>
+
+</html>
