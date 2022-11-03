@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href='./style.css'>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Montserrat'>
+    <style>
+        input{
+            outline: none;
+            border: 2px solid #aaaaaa;
+            transition: .2s;
+            padding: 10px;
+            margin: 8px 0;
+            width: 500px;
+            border-radius: 5px;
+        }
+
+        input:focus{
+            border: 2px solid skyblue;
+            box-shadow: 0 0 5px skyblue;
+        }
+
+        label{
+            font-size: 18px;
+            margin-right: 10px;   
+        }
+        button{
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1 style="padding-top: 20px; padding-left: 25px;">Register</h1>
+    <form style="padding-left: 25px;">
+        <label for="name">Name</label>
+        <input type="text" id="name"><br>
+        <label for="address">Address</label>
+        <input type="text" id="address"><br>
+        <label for="phone">Phone</label>
+        <input type="number" min="1000000000" id="phone"><br>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

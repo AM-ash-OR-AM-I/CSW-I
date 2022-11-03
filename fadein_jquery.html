@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <style>
+        div {
+            margin: 10px;
+            border-radius: 10px;
+            background-color: lightcoral;
+            width: 100px;
+            padding: 20px;
+            color: white;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#fadea").click(function () {
+                $(".a").fadeToggle(200);
+            })
+            $("#fadeb").click(function () {
+                $(".b").fadeToggle(200);
+            })
+            $("#fadec").click(function () {
+                $(".c").fadeToggle(200);
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div class="a">
+        Class A
+    </div>
+    <button id="fadea">Toggle Fade</button>
+    <div class="b">
+        div2
+    </div>
+    <button id="fadeb">Toggle Fade</button>
+    <div class="c">
+        div3
+    </div>
+    <button id="fadec">Toggle Fade</button>
+</body>
+
+</html>
