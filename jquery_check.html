@@ -6,6 +6,15 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
 
+    <style>
+        #slide{
+            display: none;
+            background-color: aqua;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+
     <script>
         $(document).ready(function(){
             $("#toggle-p1").click(
@@ -18,6 +27,10 @@
                     $("h1").toggle()
                 }
             );
+
+            $("#show").click(function(){
+                $("#slide").slideToggle("fast");
+            });
             
         });
     </script>
@@ -25,10 +38,14 @@
 </head>
 
 <body>
-    <p>This is para1</p>
-    <button id="toggle-p1">Toogle</button>
-    <h1>This is heading2</h1>
-    <button id="toggle-h1">Toggle</button>
+    <!-- <p>This is para1</p> -->
+    <!-- <button id="toggle-p1">Toogle</button> -->
+    <!-- <h1>This is heading2</h1> -->
+    <div id="show">
+        Show
+    </div>
+    <div id="slide">Slide down</div>
+    <!-- <button id="toggle-h1">Toggle</button> -->
 </body>
 
 </html>
