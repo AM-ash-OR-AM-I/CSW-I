@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Callback</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(() =>
+            $("#callback").click(() =>
+                $("p").hide(1000, () => alert("HelloWorld"))
+            )
+        );
+    </script>
+</head>
+
+<body>
+    <button id="callback">Callback</button>
+    <p>Hello world</p>
+</body>
+
+</html>

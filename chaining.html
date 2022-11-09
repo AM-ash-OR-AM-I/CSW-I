@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chaining</title>
+    <style>
+        p {
+            display: none;
+        }
+    </style>
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(() =>
+            $("#callback").click(() =>
+                $("p").css("color", "blue").slideDown().slideUp()
+            )
+        )
+    </script>
+</head>
+
+<body>
+    <button id="callback">Callback</button>
+    <p>Hello world</p>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#change").click(() =>
+                $("#im").attr("src", "./SOA.png")
+            )
+            $("#append").click(() =>
+                $("ol").append("<li>After</li>")
+            )
+            $("#prepend").click(() =>
+                $("ol").prepend("<li>Before</li>")
+            )
+            $("#remove").click(() =>
+                $("#1").remove()
+            )
+            $("#empty").click(() =>
+                $("#2").empty()
+            )
+            $("#before-img").click(() =>
+                $("#im").before("<p>Before</p>")
+            )
+        });
+    </script>
+    <title>DOM</title>
+</head>
+
+<body>
+    <div id="test">
+        <div>Hello Ash here</div>
+        <div>rbferjbfjke</div>
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" id="im" alt="" height="100px"><br>
+        <button id="change">change Image</button>
+        <ol>
+            <li id="1">list1</li>
+            <li id="2">list2</li>
+        </ol> 
+    </div>
+    <button id="before-img">Before Image</button>
+    <button id="append">Append</button>
+    <button id="prepend">Prepend</button>
+    <button id="remove">Remove</button>
+    <button id="empty">Empty</button>
+</body>
+
+</html>
