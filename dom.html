@@ -20,11 +20,14 @@
             $("#remove").click(() =>
                 $("#1").remove()
             )
-            $("#empty").click(() =>
+            $("#empty ").click(() =>
                 $("#2").empty()
             )
             $("#before-img").click(() =>
                 $("#im").before("<p>Before</p>")
+            )
+            $("#show_all_code").click(()=>
+                $("#test").after("<p>Hello<p>")
             )
         });
     </script>
@@ -47,6 +50,8 @@
     <button id="prepend">Prepend</button>
     <button id="remove">Remove</button>
     <button id="empty">Empty</button>
+    <button id="show_all_code">Show all code</button>
+
 </body>
 
 </html>

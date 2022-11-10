@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddClass</title>
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(
+            () => $("#add").click(
+                function() {
+                    // $(".class1").toggleClass("class2");
+                    $(".class1").css("height","300px")
+                    alert("Color = "+$(".class1").css("background-color"))
+                }
+                
+            )
+        )
+    </script>
+    <style>
+        .class1{
+            width: 100px;
+            height: 100px; 
+            background-color: red; 
+            transition: .5s;
+        }
+        .class2{
+            width: 200px;
+            background-color: green;
+            transition: .5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div class="class1"></div>
+    </div>
+    <button id="add">Add Class</button>
+    <button id="add_css">Add css</button>
+</body>
+</html>
