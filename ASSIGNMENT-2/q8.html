@@ -1,0 +1,86 @@
+<!-- Q8 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-family: system-ui;
+        }
+
+        #form {
+            padding: 20px;
+            background-color: rgba(189, 189, 189, 0.171);
+            border-radius: 20px;
+        }
+
+        input {
+            outline-width: 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            transition: .2s;
+            margin: 10px;
+        }
+
+        input:focus {
+            box-shadow: 0 0 5px 1px rgba(144, 216, 255, 0.649);
+        }
+
+        input:hover {
+            box-shadow: 0 0 5px 1px rgba(144, 216, 255, 0.649);
+        }
+
+        label {
+            padding: 10px;
+            font-size: 20px;
+            font-family: 'Segoe UI';
+        }
+
+        #place {
+            margin-bottom: 20px;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .btn {
+            background-color: grey;
+            text-align: center;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .center-align {
+            padding: 30px;
+            text-align: center;
+            font-family: system-ui;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Form</h1>
+    <form action="" id="form">
+        <label for="">Name</label>
+        <input type="text"><br>
+        <label for="">Contact</label>
+        <input type="text"><br>
+        <label for="">Place</label>
+        <select name="Place" id="place">
+            <option value="od">Odisha</option>
+            <option value="ch">Chattisgarh</option>
+            <option value="bh">Bihar</option>
+        </select>
+    </form>
+    <div class="center-align">
+        <a class="btn">Submit</a>
+    </div>
+</body>
+
+</html>
