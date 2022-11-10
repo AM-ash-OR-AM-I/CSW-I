@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(
+            ()=> $("#change_parent").click(
+                function(){
+                    $("#1").parentsUntil(".ol1").css("border", "2px solid blue");
+                    $("#1").parentsUntil(".ol1").css("border", "2px solid blue");
+                    $(".ol1").children().css("border", "2px solid red");
+                }
+            )
+            ()=> $("#siblings").click(
+                function(){
+                    $("#1").siblings().css(
+                        "color","green"
+                    )
+                }
+            )
+        )
+    </script>
+    <style>
+        ol{
+            border: 1px solid black;
+        }
+        li{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <ol class="ol1">
+        <ol class="ol2">
+            <li id="1">List1</li>
+            <li>List2</li>
+        </ol>
+    </ol>
+    <button id="change_parent">Chnage Parent</button>
+    <button id="siblings">Siblings</button>
+</body>
+</html>
