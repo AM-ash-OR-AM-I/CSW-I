@@ -8,20 +8,34 @@
     <script src="./jquery.js"></script>
     <script>
         $(document).ready(
-            ()=> $("#change_parent").click(
+            function() { 
+                $("#change_parent").click(
                 function(){
-                    $("#1").parentsUntil(".ol1").css("border", "2px solid blue");
-                    $("#1").parentsUntil(".ol1").css("border", "2px solid blue");
-                    $(".ol1").children().css("border", "2px solid red");
-                }
-            )
-            ()=> $("#siblings").click(
+                    $("#a").parentsUntil(".ol1").css("border", "2px solid blue");
+                });
+                $("#siblings").click(
                 function(){
-                    $("#1").siblings().css(
+                    $("li").siblings().css(
+                        "color","blue"
+                    );
+                    $("li").next().css(
                         "color","green"
-                    )
-                }
-            )
+                    );
+                    $("li").nextUntil("#end-1").css(
+                        "color","coral"
+                    );
+                    $("li").first().css(
+                        "color","violet"
+                    );
+                    $("li").eq(3).css(
+                        "color","grey"
+                    );
+                });
+            }
+            
+        
+            
+            // )
         )
     </script>
     <style>
@@ -36,10 +50,14 @@
 <body>
     <ol class="ol1">
         <ol class="ol2">
-            <li id="1">List1</li>
+            <li id="a">List1</li>
             <li>List2</li>
+            <li>List3</li>
+            <li id="end-1">List4</li>
+            <li id="end">List5</li>
         </ol>
     </ol>
+    <h1>Header</h1>
     <button id="change_parent">Chnage Parent</button>
     <button id="siblings">Siblings</button>
 </body>
