@@ -1,0 +1,30 @@
+<!-- Q1 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Q1</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#ct").click(function () {
+                $("#show").text("No. of Children = "+$("#selected").children().length)
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div id="selected">
+        <p>Red</p>
+        <p>White</p>
+        <p>Green</p>
+        <p>Black</p>
+        <p>Blue</p>
+        <p>Orange</p>
+    </div>
+    <button id="ct">Count</button>
+    <p id="show"></p>
+</body>
+
+</html>

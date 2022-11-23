@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Q4</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        #btn{
+            padding: 20px;
+            background-color: skyblue;
+            border: none;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .popup{
+            display: flex;
+            padding: 30px;
+            width: 400px;
+            border-radius: 20px;
+            background-color:gray;
+            text-align: center;
+            transition: .5s;
+            color: white;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("#btn").css("opacity", "0");
+                $(".container").addClass("popup").text("Alert Box");
+            })
+        }) 
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="btn">Popup</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- Q2 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").click(function () {
+                $("#onclick").text("single click")
+            })
+            $("p").dblclick(function () {
+                $("#onclick").text("Double click")
+            })
+        })
+    </script>
+    <title>Q2</title>
+</head>
+
+<body>
+    <p>Click me!</p>
+    <p id="onclick"></p>
+</body>
+
+</html>
