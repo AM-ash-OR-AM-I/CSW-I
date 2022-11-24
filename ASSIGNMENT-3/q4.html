@@ -8,19 +8,20 @@
             justify-content: center;
             align-content: center;
         }
-        #btn{
+        .btn{
             padding: 20px;
             background-color: skyblue;
             border: none;
             border-radius: 10px;
             text-align: center;
+            color: white;
         }
         .popup{
-            display: flex;
-            padding: 30px;
-            width: 400px;
+            /* display: flex; */
+            padding: 40px;
+            width: 300px;
             border-radius: 20px;
-            background-color:gray;
+            background-color:blue;
             text-align: center;
             transition: .5s;
             color: white;
@@ -29,16 +30,16 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
     <script>
         $(document).ready(function(){
-            $("#btn").click(function(){
-                $("#btn").css("opacity", "0");
-                $(".container").addClass("popup").text("Alert Box");
+            $(".btn").click(function(){
+                // $(".btn").css("opacity", "0");
+                $(".btn").addClass("popup").text("This is a alert box");
             })
         }) 
     </script>
 </head>
 <body>
     <div class="container">
-        <div id="btn">Popup</div>
+        <div class="btn">Popup</div>
     </div>
 </body>
 </html>

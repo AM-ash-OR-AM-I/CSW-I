@@ -1,0 +1,88 @@
+<!-- Q5 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.js"></script>
+    <style>
+        * {
+            font-family: system-ui;
+        }
+
+        .btn {
+            padding: 20px;
+            border-radius: 15px;
+            border: none;
+            margin: 10px;
+            color: white;
+            background-color: rgb(147, 147, 255);
+            box-shadow: 0 0 5px 0px rgb(136, 136, 255);
+        }
+        #a{
+            position: relative;
+        }
+        .new-class{
+            font-family: monospace;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#SlideDown").click(function () {
+                $("#a").slideDown();
+            })
+            $("#SlideUp").click(function () {
+                $("#a").slideUp();
+            })
+            $("#Animate").click(function () {
+                $("#a").animate({
+                    left: "+=50px"
+                });
+            })
+            $("#Fadein").click(function () {
+                $("#a").fadeIn("slow");
+            })
+            $("#Hide").click(function () {
+                $("#a").hide();
+            })
+            $("#Show").click(function () {
+                $("#a").show();
+            })
+            $("#hover").mouseenter(function () {
+                $("#a").css("background-color", "grey");
+            })
+            $("#hover").mouseleave(function () {
+                $("#a").css("background-color", "transparent");
+            })
+            $("#DblClick").dblclick(function () {
+                $("#a").text("Double Click!");
+            })
+            $("#Attr").click(function () {
+                $("#a").attr("class", "new-class");
+            })
+            $("#html").click(function () {
+                alert($("body").html());
+            })
+
+        })
+    </script>
+
+</head>
+
+<body>
+    <h1 id="a">Heading</h1>
+    <button class="btn" id="SlideDown">SlideDown</button>
+    <button class="btn" id="SlideUp">SlideUp</button>
+    <button class="btn" id="Animate">Animate</button>
+    <button class="btn" id="Fadein">Fadein</button>
+    <button class="btn" id="Hide">Hide</button>
+    <button class="btn" id="Show">Show</button>
+    <button class="btn" id="hover">HoverAction</button>
+    <button class="btn" id="DblClick">DblClick</button>
+    <button class="btn" id="Attr">Attr</button>
+    <button class="btn" id="html">html</button>
+</body>
+
+</html>
