@@ -1,0 +1,120 @@
+<!-- Q8 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Q8</title>
+    <style>
+        body {
+            font-family: system-ui;
+        }
+
+        .company {
+            padding: 10px;
+            color: blue;
+        }
+
+        .name {
+            font-weight: bold;
+            padding: 10px;
+        }
+        .item {
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            float: left;
+            /* display: flex; */
+            justify-content: center;
+            border-radius: 15px;
+            box-shadow: 0 1px 3px 0 rgb(131, 131, 131);
+            transition: box-shadow 0.2s;
+        }
+        .item:hover {
+            box-shadow: 0 3px 10px 0 rgb(155, 155, 155);
+        }
+        .heading-category {
+            height: 100%;
+        }
+        tr {
+            vertical-align: top;
+        }
+        .category {
+            border-radius: 20px;
+            padding: 15px;
+            width: 150px;
+        }
+        .category:hover {
+            background-color: rgba(117, 117, 117, 0.247);
+        }
+
+        td {
+            padding-left: 10px;
+            align-content: flex-start;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".category").click(function(){
+                $(".jobs").replaceAll($(".jobs").filter(".category"));
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Postings </h1>
+    <table>
+        <tr>
+            <th>
+                <h3>Categories</h1>
+            </th>
+            <th>
+                <h3>Posts</h3>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <div class="category">Software Engineer</div>
+                <div class="category">Data Scienist</div>
+                <div class="category">Digital Marketing</div>
+                <div class="category">Software Engineer</div>
+                <div class="category">Digital Marketing</div>
+                <div class="category">Android Dev</div>
+                <div class="category">Manager</div>
+            </td>
+            <td class="jobs">
+                <div class="item cs">
+                    <div class="company">Google</div>
+                    <div class="name">Software Engineer</div>
+                </div>
+                <div class="item cs">
+                    <div class="company">Adobe</div>
+                    <div class="name">Software Engineer</div>
+                </div>
+                <div class="item cs">
+                    <div class="company">Microsoft</div>
+                    <div class="name">Data Scienist</div>
+                </div>
+                <div class="item finance">
+                    <div class="company">Meta</div>
+                    <div class="name">Digital Marketing</div>
+                </div>
+                <div class="item cs">
+                    <div class="company">Meta</div>
+                    <div class="name">App Dev</div>
+                </div>
+                <div class="item cs">
+                    <div class="company">Google</div>
+                    <div class="name">App Dev</div>
+                </div>
+                <div class="item management">
+                    <div class="company">Amazon</div>
+                    <div class="name">Manager</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
