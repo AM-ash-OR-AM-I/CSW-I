@@ -96,11 +96,22 @@
     <script src="../jquery.js"></script>
     <script>
         function clicked() {
-            var a = document.forms["form"]["form1"].value;
-            alert(a);
-            if (a == null) {
-                alert("Can't be null")
+            var form = document.forms["form"];
+            var user = form["username"].value;
+            var mail = form["mail"].value;
+            var pass = form["password"].value;
+            var msg = "";
+            switch ("") {
+                case user:
+                    msg += "Username can't be empty.\n"
+                case mail:
+                    msg += "Mail can't be empty.\n"
+                case pass:
+                    msg += "Password can't be empty.\n"
             }
+            if (msg){
+                alert(msg);
+            }      
         }
     </script>
 </head>
@@ -115,15 +126,15 @@
             <table id="table">
                 <tr>
                     <td><label for="">Username</label></td>
-                    <td><input type="text" placeholder="Enter name" class="my-textbox" name="form1"></td>
+                    <td><input type="text" placeholder="Enter name" class="my-textbox" name="username"></td>
                 </tr>
                 <tr>
                     <td><label for="">Email</label></td>
-                    <td><input type="email" placeholder="Enter email" class="my-textbox"></td>
+                    <td><input type="email" placeholder="Enter your mail" class="my-textbox" name="mail"></td>
                 </tr>
                 <tr>
                     <td><label for="">Password</label></td>
-                    <td><input type="password" class="my-textbox" placeholder="Enter password"></td>
+                    <td><input type="password" class="my-textbox" placeholder="Enter password" name="password"></td>
                 </tr>
             </table>
             <div class="center-align">
