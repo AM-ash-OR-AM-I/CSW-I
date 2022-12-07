@@ -1,0 +1,92 @@
+<!-- Q10: MultiPage Website -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Q10</title>
+    <style>
+        body {
+            margin: 0px;
+            font-family: 'Segoe UI';
+        }
+
+        .navbar {
+            background-color: #684895;
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        a:hover {
+            background-color: hsl(265, 35%, 73%);
+            color: hsl(265, 35%, 33%);
+        }
+
+        .my-textbox {
+            outline-width: 0;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            transition: .2s;
+            margin-top: 8px;
+            margin-bottom: 20px;
+        }
+
+        .my-textbox:focus {
+            box-shadow: 0 0 0px 4px rgba(183, 159, 255, 0.3);
+        }
+
+        .my-textbox:hover {
+            box-shadow: 0 0 0px 4px rgba(183, 159, 255, 0.47);
+        }
+
+        label {
+            color: #684895;
+            font-size: 20px;
+        }
+
+        form {
+            margin: 80px;
+        }
+
+        .contact-button {
+            background-color: #885fc1;
+            border-radius: 15px;
+            padding: 15px;
+            width: 100px;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-button:hover {
+            background-color: hsl(265, 44%, 46%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="q10.html">Team Member</a>
+        <a href="q10_1.html">Contact Us</a>
+    </div>
+    <h1 style="text-align: center;">Contact</h1>
+    <form action="">
+        <label for="text">First Name</label>
+        <input type="text" class="my-textbox">
+        <label for="text">Middle Name</label>
+        <input type="text" class="my-textbox">
+        <label for="text">Email</label>
+        <input type="text" class="my-textbox">
+        <div class="contact-button">Contact Us</div>
+    </form>
+</body>
+
+</html>
