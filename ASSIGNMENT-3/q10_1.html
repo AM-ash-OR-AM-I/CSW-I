@@ -35,19 +35,15 @@
             border-radius: 5px;
             border: 1px solid #ccc;
             padding: 10px;
-            transition: .2s;
+            transition: box-shadow .2s;
             margin-top: 8px;
             margin-bottom: 20px;
         }
 
-        .my-textbox:focus {
-            box-shadow: 0 0 0px 4px rgba(183, 159, 255, 0.3);
+        .my-textbox:focus, .my-textbox:hover {
+            box-shadow: 0 0 0px 4px rgba(183, 159, 255, 0.35);
         }
-
-        .my-textbox:hover {
-            box-shadow: 0 0 0px 4px rgba(183, 159, 255, 0.47);
-        }
-
+      
         label {
             color: #684895;
             font-size: 20px;
