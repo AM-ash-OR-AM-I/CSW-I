@@ -6,6 +6,6 @@ public class q1 {
         return 0;
     }
     public static void main(String[] args) {
-        System.out.println(countNoOfBits(4));
+        System.out.println(countNoOfBits(5));
     }
 }

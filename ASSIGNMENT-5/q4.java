@@ -17,21 +17,6 @@ public class q4 {
         return sum;
     }
     public static void main(String[] args) {
-        /*
-         * 5*3 = 15
-         * 5 = 101
-         * 3 = 11
-         * 15 = 1111
-         * 
-         * 5*7 =35
-         * 5 << 3 = 20
-         * 5 << 1 = 10
-         * 5 << 0 = 5
-         * 
-         * 8*20 = 160
-         * 8 >> 2 = 16         
-         */
-        // System.out.println(add(324, 43));
         System.out.print("Enter 2 numbers to multiply: ");
         Scanner sc = new Scanner(System.in);
         int x = sc.nextInt(), y = sc.nextInt();
