@@ -1,9 +1,9 @@
 public class q3 {
-    static String padZeroes(String s, int length){
+    static String padZeroes(String s){
         return String.format("%64s", s).replace(" ", "0");
     }
     static void swapIJ(int n, int i, int j) {
-        String bin_string = padZeroes(Integer.toString(n, 2), 64);
+        String bin_string = padZeroes(Integer.toString(n, 2));
         String swapped_str = "";
         for (int x = 0; x < bin_string.length(); x++) {
             if (x == i) {
@@ -14,12 +14,12 @@ public class q3 {
                 swapped_str += bin_string.charAt(x);
             }
         }
-        System.out.println(Integer.parseInt(swapped_str, 2));
+        System.out.println(Long.parseLong(swapped_str, 2)+" "+swapped_str);
 
     }
 
     public static void main(String[] args) {
-        int n = 4234;
-        swapIJ(n, 1, 5);
+        int n = 1234;
+        swapIJ(n, 1, 62);
     }
 }

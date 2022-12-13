@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class q4 {
     static int add(int x, int y){
         while (y>0){
@@ -30,7 +32,10 @@ public class q4 {
          * 8 >> 2 = 16         
          */
         // System.out.println(add(324, 43));
-        System.out.println(multiply(5, 3));
+        System.out.print("Enter 2 numbers to multiply: ");
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt(), y = sc.nextInt();
+        System.out.printf("%d X %d = %d",x, y, multiply(x, y));
 
     }    
 }
