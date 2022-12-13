@@ -1,6 +1,9 @@
 public class q3 {
+    static String padZeroes(String s, int length){
+        return String.format("%64s", s).replace(" ", "0");
+    }
     static void swapIJ(int n, int i, int j) {
-        String bin_string = Integer.toString(n, 2);
+        String bin_string = padZeroes(Integer.toString(n, 2), 64);
         String swapped_str = "";
         for (int x = 0; x < bin_string.length(); x++) {
             if (x == i) {

@@ -1,6 +1,18 @@
 public class q4 {
-    static int computeXxY(int x, int y){    
-        return 1;
+    static int add(int x, int y){
+        while (y>0){
+            int carry = (x&y)<<1;
+            x = x^y;
+            y = carry;
+        }
+        return x;
+    }
+    static int multiply(int x, int y){    
+        int sum = 0;
+        for (int i=0; i<y; i++){
+            sum = add(sum, x);
+        }
+        return sum;
     }
     public static void main(String[] args) {
         /*
@@ -15,19 +27,10 @@ public class q4 {
          * 5 << 0 = 5
          * 
          * 8*20 = 160
-         * 8 << 10 = 
-         * 
-         * 
-         *  101
-         * +101
-         * +101
-         * 5 << 2 = 10 (101 -> 1010)
-         * 3*3 = 9 (1001)
-         * 3 << 2  = 6 (110)
-         * 
-         * -----
-         * 1111
+         * 8 >> 2 = 16         
          */
+        // System.out.println(add(324, 43));
+        System.out.println(multiply(5, 3));
 
     }    
 }
