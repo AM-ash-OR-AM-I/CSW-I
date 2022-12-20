@@ -4,10 +4,13 @@ import java.util.List;
 public class q17 {
   static void deleteDuplicates(ArrayList<Integer> arr) {
     Integer prev = null;
-    for (int i=0; i< arr.size(); i++) {
+    int i = 0;
+    while (i < arr.size()) {
       Integer x = arr.get(i);
       if (x.equals(prev)) {
-        arr.remove(i);
+        arr.remove(x);
+      } else {
+        i++;
       }
       prev = x;
     }
