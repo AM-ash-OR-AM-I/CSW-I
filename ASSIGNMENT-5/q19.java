@@ -15,7 +15,7 @@ public class q19 {
   }
   public static void main(String[] args) {
     Integer[] arr = {45, 435, 8756};
-    Object[] newArr = insertAtAny(arr, 2, 423);
+    Object[] newArr = insertAtAny(arr, 2 , 423);
     System.out.println("New Array");
     for(Object x: newArr){
       System.out.print(x+", ");
