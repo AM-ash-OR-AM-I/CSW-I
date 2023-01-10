@@ -5,7 +5,7 @@ public class q9 {
     s = s.toUpperCase();
     int encodedVal = 0;
     for (int i = 0; i < s.length(); i++) {
-      encodedVal += (s.charAt(i) - 64) * Math.pow(26, i);
+      encodedVal += (s.charAt(i) - 64);
     }
     return encodedVal;
   }
@@ -13,7 +13,7 @@ public class q9 {
   public static void main(String[] args) {
     try (Scanner sc = new Scanner(System.in)) {
       String col = sc.next();
-      System.out.printf("Encoded value of %s = %d", col,encodeSpreadsheet(col));
+      System.out.printf("Encoded value of %s = %d", col, encodeSpreadsheet(col));
     }
   }
 }

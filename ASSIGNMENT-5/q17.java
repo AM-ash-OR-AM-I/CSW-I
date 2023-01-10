@@ -8,7 +8,7 @@ public class q17 {
     while (i < arr.size()) {
       Integer x = arr.get(i);
       if (x.equals(prev)) {
-        arr.remove(x);
+        arr.remove(i);
       } else {
         i++;
       }
