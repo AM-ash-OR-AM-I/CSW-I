@@ -1,22 +1,27 @@
-class A{
+class A {
     public int a = 43;
-    A(){
+
+    A() {
         System.out.println("No");
     }
-    void show(){
+
+    void show() {
         System.out.println(a);
     }
 }
-public class Test extends A{
+
+public class Test extends MyClass {
     int a;
     int b;
-    private Test(){
+
+    private Test() {
         super();
         System.out.println("Yes");
     }
+
     public static void main(String[] args) {
         Test test = new Test();
-        
+
         // test.show();
     }
 }

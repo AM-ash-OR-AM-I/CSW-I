@@ -1,5 +1,7 @@
 {
     "liveServer.settings.port": 5501,
     "editor.tabSize": 2,
-    "files.autoSaveDelay": 1000
+    "files.autoSaveDelay": 1000,
+    "python.analysis.typeCheckingMode": "basic",
+    "java.debug.settings.onBuildFailureProceed": true
 }
