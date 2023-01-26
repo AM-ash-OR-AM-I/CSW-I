@@ -2,120 +2,112 @@ package AD;
 
 import java.util.HashMap;
 
-class Node {
-  int key;
-  int value;
-  Node nextNode;
-  Node prevNode;
 
-  Node() {
 
-  }
+class Node<K, V> {
+  K key;
+  V value;
+  Node<K, V> nextNode;
+  Node<K, V> prevNode;
 
-  Node(int key, int value) {
+  Node(K key, V value) {
     this.key = key;
     this.value = value;
   }
 }
 
-class MyLinkedList {
-  Node front, rear;
-  HashMap<Integer, Node> hashNode = new HashMap<>();
+class DoubleLinkedList<K, V> {
+  Node<K, V> front, rear;
+  HashMap<K, Node<K, V>> hashNode = new HashMap<>();
   static int maxLength;
   int length = 0;
 
-  MyLinkedList(int length) {
+  DoubleLinkedList(int length) {
     maxLength = length;
   }
 
-  void enqueue(int key, int value) {
+  void add(K key, V value) {
     if (length < maxLength) {
       length++;
-      Node newNode = new Node(key, value);
+      Node<K, V> newNode = new Node<K, V>(key, value);
       if (front == null) {
         front = rear = newNode;
       } else {
-        Node tempPrev = rear;
+        newNode.prevNode = rear;
         rear.nextNode = newNode;
         rear = rear.nextNode;
-        rear.prevNode = tempPrev;
       }
       hashNode.put(key, newNode);
-      System.out.println(hashNode);
 
     } else {
       System.out.println("Max length of queue execeeded.");
     }
   }
 
-  int remove(int key, String choice) {
+  V remove(K key, String choice) {
     // Unlinks the node from the linked list
-    int value = -1;
+    V value = null;
     if (hashNode.containsKey(key)) {
       length--;
-      Node removeNode = hashNode.get(key);
-      Node nextNode = removeNode.nextNode;
-      Node prevNode = removeNode.prevNode;
+      Node<K, V> removeNode = hashNode.get(key);
+      Node<K, V> nextNode = removeNode.nextNode;
+      Node<K, V> prevNode = removeNode.prevNode;
       if (removeNode == front) {
         value = removeFront();
       } else if (removeNode == rear) {
         value = removeRear();
       } else {
         prevNode.nextNode = nextNode;
+        nextNode.prevNode = prevNode;
         value = removeNode.value;
         hashNode.remove(key);
       }
-    } else if (length == maxLength) {
-      if (choice == "put") {
-        length--;
-        removeFront();
-        value = -1;
-      }
+    } else if (length == maxLength && choice == "put") {
+      length--;
+      removeFront();
     }
     return value;
   }
 
-  int removeFront() {
+  V removeFront() {
     if (length == -1) {
       System.out.println("Queue is empty");
-      return -1;
+      return null;
     } else {
-      int removed = front.value;
+      V removed = front.value;
       hashNode.remove(front.key);
       front = front.nextNode;
       return removed;
-      // System.out.printf("Element removed: %s%n", removed);
     }
   }
 
-  int removeRear() {
+  V removeRear() {
     if (length == 0) {
       System.out.println("Queue is empty");
-      return -1;
+      return null;
     } else {
-      int removed = rear.value;
+      V removed = rear.value;
       hashNode.remove(rear.key);
       rear = rear.prevNode;
       rear.nextNode = null;
       return removed;
-      // System.out.printf("Element removed: %s%n", removed);
     }
   }
 
   void display() {
     if (length > 0) {
       System.out.print("Queue = ");
-      Node curNode = front;
+      Node<K, V> curNode = front;
       if (length == 1) {
-        System.out.printf("{%d : %d}%n", front.key, front.value);
+        System.out.printf("{%s : %s}%n", front.key, front.value);
       } else {
-        System.out.printf("{%d : %d, ", front.key, front.value);
+        System.out.printf("{%s : %s, ", front.key, front.value);
         curNode = curNode.nextNode;
         while (curNode != rear) {
-          System.out.printf("%d: %d, ", curNode.key, curNode.value);
+          System.out.printf("%s: %s, ", curNode.key, curNode.value);
           curNode = curNode.nextNode;
         }
-        System.out.printf("%d: %d}%n", rear.key, rear.value);
+        System.out.printf("%s: %s}%n", rear.key, rear.value);
       }
     }
 
@@ -123,45 +115,29 @@ class MyLinkedList {
 }
 
 public class LRUCache {
-  MyLinkedList ll;
+  DoubleLinkedList<Integer, Integer> dll;
   int capacity;
 
   public LRUCache(int capacity) {
     this.capacity = capacity;
-    ll = new MyLinkedList(capacity);
+    dll = new DoubleLinkedList<>(capacity);
   }
 
   public int get(int key) {
-    System.out.printf("%nget(%d)%n", key);
-    /*
-     * This doesn't work. [3, 6, 10, 9, 2]
-     * get(6) -> [6, 10, 9, 2, 6] X
-     * [3, 6, 10, 9, 2,__]
-     * \___________/
-     * Instead we need [3, 10, 9, 2, 6]
-     * {2: Node@xtyz}
-     */
-    // System.out.println(ll.hashNode);
-    int value = ll.remove(key, "get");
-    if (value != -1)
-      ll.enqueue(key, value);
-    ll.display();
-    return value;
+    // System.out.printf("%nget(%d)%n", key);
+    Integer value = dll.remove(key, "get");
+    if (value != null)
+      dll.add(key, value);
+    dll.display();
+    return value == null ? -1 : value;
   }
 
   public void put(int key, int value) {
-    System.out.printf("%nput(%d, %d)%n", key, value);
-    ll.remove(key, "put");
-    ll.enqueue(key, value);
-    // System.out.println(ll.length);
-    ll.display();
+    // System.out.printf("%nput(%d, %d)%n", key, value);
+    dll.remove(key, "put");
+    dll.add(key, value);
+    dll.display();
+    
   }
 
 }
-
-/**
- * Your LRUCache object will be instantiated and called as such:
- * LRUCache obj = new LRUCache(capacity);
- * int param_1 = obj.get(key);
- * obj.put(key,value);
- */

@@ -1,4 +1,3 @@
-package garbage_collection;
 // Java Program to count number
 
 // of employees working

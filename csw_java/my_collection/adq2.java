@@ -31,9 +31,8 @@ public class adq2 {
   }
 
   public static void main(String[] args) {
-    int[][] interval
-            = { { 1, 3, 2 }, { 4, 5, 2 }, { 1, 5, 5 } };
-        int maxValue = maxTwoNonOverLapping(interval);
-        System.out.println(maxValue);
+    int[][] interval = { { 1, 3, 2 }, { 4, 5, 2 }, { 1, 5, 5 } };
+    int maxValue = maxTwoNonOverLapping(interval);
+    System.out.println(maxValue);
   }
 }

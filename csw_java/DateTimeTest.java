@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.time.Period;
 
-public class DateTime {
+public class DateTimeTest {
   public static void main(String[] args) {
     LocalDate birthDate = LocalDate.of(2003, 9, 29);
     LocalDate currDate = LocalDate.now();
