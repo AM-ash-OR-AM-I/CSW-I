@@ -11,9 +11,9 @@ def quick_sort(arr: List[int], low, high):
     [0, 1 | 2 | 4, 3]
      lo  hi    lo  hi
      
-    [1, 0 | 2 | 3, 4]
-     |__|       |__|
-     swap       swap
+    [0, 1 | 2 | 3, 4]
+                |__|
+                swap
     """
     def partition() -> int:
         pivot = arr[high]
