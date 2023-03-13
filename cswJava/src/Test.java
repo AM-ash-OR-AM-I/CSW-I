@@ -19,8 +19,13 @@ public class Test extends MyClass {
         System.out.println("Yes");
     }
 
+    static <T> T test(T data){
+        return data;
+    }
+
     public static void main(String[] args) {
-        Test test = new Test();
+        Test test1 = new Test();
+        System.out.println(test("332"));
 
         // test.show();
     }
