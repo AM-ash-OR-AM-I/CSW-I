@@ -34,21 +34,29 @@ class Student {
 public class hashMaps {
   public static void main(String[] args) {
 
-    // HashMaps
+    // Hashtable
+    System.out.println("HashMap: ");
     HashMap<String, Integer> hashMap = new HashMap<>();
     hashMap.put("adfd", 34);
+    hashMap.put("adfde", 34);
     hashMap.put("dfg", 34);
+    hashMap.put("gbgds", 34);
     hashMap.put("gfd", 454);
-    hashMap.put("retw", null);
-    // for (Map.Entry<String, Integer> mapElement : hashMap.entrySet()) {
-    // System.out.println(mapElement.getKey() + ": " + mapElement.getValue());
-    // }
+    for (Map.Entry<String, Integer> mapElement : hashMap.entrySet()) {
+    System.out.println(mapElement.getKey() + ": " + mapElement.getValue());
+    }
 
-    Hashtable<String, Integer> hashtable = new Hashtable<>();
-    hashtable.put("adfd", 34);
-    hashtable.put("dfg", 34);
-    hashtable.put("gfd", 454);
-    for (Map.Entry<String, Integer> mapElement : hashtable.entrySet()) {
+    
+    System.out.println("\nHashTable: ");
+    Hashtable<Integer, Integer> hashtable = new Hashtable<>();
+    hashtable.put(1, 34);
+    hashtable.put(2, 34);
+    hashtable.put(3, 34);
+    hashtable.put(7, 34);
+    hashtable.put(15, 34);
+    hashtable.put(4, 34);
+    hashtable.put(5, 454);
+    for (Map.Entry<Integer, Integer> mapElement : hashtable.entrySet()) {
       System.out.println(mapElement.getKey() + ": " + mapElement.getValue());
     }
   }
